@@ -11,11 +11,11 @@ gulp.task('hello', function(done){
 gulp.task('browser-sync', function() {
  browserSync.init({
      server: {
-         baseDir: "./"
+         baseDir: "./src"
      }
  });
- gulp.watch("./*.html").on('change', browserSync.reload);
- gulp.watch("./css/*.css").on('change', browserSync.reload);
+ gulp.watch("./src/*.html").on('change', browserSync.reload);
+ gulp.watch("./src/css/*.css").on('change', browserSync.reload);
 });
 
 gulp.task('minify-css', () => {
