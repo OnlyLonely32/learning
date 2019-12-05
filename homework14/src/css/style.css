@@ -317,7 +317,25 @@ template {
 [hidden] {
   display: none; }
 
+.container {
+  max-width: 1256px;
+  margin: auto; }
+
+.button {
+  padding: 13px 20px;
+  border: none;
+  border-radius: 2px;
+  text-transform: uppercase; }
+  .button--primary {
+    background-color: #E3B873;
+    color: #fff; }
+
 .header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
   padding: 24px 0;
   background-color: #131313; }
 
@@ -344,6 +362,7 @@ template {
 
 .hero {
   position: relative;
+  margin-top: 90px;
   background: #131313 url("../../img/hero-bg.jpg") no-repeat center/cover;
   color: #fff;
   height: 100vh; }
@@ -367,19 +386,6 @@ template {
 
 .title {
   margin: 0; }
-
-.container {
-  max-width: 1256px;
-  margin: auto; }
-
-.button {
-  padding: 13px 20px;
-  border: none;
-  border-radius: 2px;
-  text-transform: uppercase; }
-  .button--primary {
-    background-color: #E3B873;
-    color: #fff; }
 
 body {
   font-family: 'Futura Book', sans-serif;
