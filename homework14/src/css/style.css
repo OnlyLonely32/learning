@@ -362,7 +362,7 @@ template {
 
 .hero {
   position: relative;
-  margin-top: 90px;
+  padding-top: 90px;
   background: #131313 url("../../img/hero-bg.jpg") no-repeat center/cover;
   color: #fff;
   height: 100vh; }
@@ -386,6 +386,9 @@ template {
 
 .title {
   margin: 0; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
 
 body {
   font-family: 'Futura Book', sans-serif;
