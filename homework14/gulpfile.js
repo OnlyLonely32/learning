@@ -25,7 +25,7 @@ function minifycss()  {
 }
 
 function serveSass() {
-    return src("./src/sass/*.sass")
+    return src("./src/sass/**/*.sass")
         .pipe(sass())
         .pipe(dest("./src/css"))
         .pipe(browserSync.stream());
