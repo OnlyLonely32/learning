@@ -342,6 +342,32 @@ template {
 .contacts__phone {
   margin-right: 45px; }
 
+.hero {
+  position: relative;
+  background: #131313 url("../../img/hero-bg.jpg") no-repeat center/cover;
+  color: #fff;
+  height: 100vh; }
+  .hero__instagramm {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 80px;
+    height: 100vh; }
+
+.instagramm {
+  background-color: #131313;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .instagramm__link {
+    text-transform: uppercase;
+    color: #E3B873;
+    text-decoration: none;
+    transform: rotate(90deg); }
+
+.title {
+  margin: 0; }
+
 .container {
   max-width: 1256px;
   margin: auto; }
