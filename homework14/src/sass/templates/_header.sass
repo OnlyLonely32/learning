@@ -12,6 +12,8 @@
  align-items: center
 .logo
  color: $primary
+ font-family: 'Futura Demi', sans-serif
+ font-weight: 500
  text-transform: uppercase
 .nav
  &__item
@@ -19,8 +21,18 @@
   color: $light
   text-transform: uppercase
   margin-right: 40px
+  transition: color .2s
+  &:hover
+    color: $primary
+    
 .phone 
+ font-family: 'Futura Demi', sans-serif
+ text-decoration: none
+ border-bottom: 1px solid $primary
  color: $primary
 .contacts
  &__phone
   margin-right: 45px
+ &__button
+  padding: 11.5px 24.1px
+
