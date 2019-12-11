@@ -344,6 +344,39 @@ template {
     background-color: transparent;
     color: #fff; }
 
+.label {
+  font-size: 1.07rem; }
+  .label--light {
+    color: rgba(255, 255, 255, 0.5); }
+
+.input {
+  padding: .3rem 0 .6rem 0;
+  font-size: 1.285rem;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: transparent; }
+  .input::placeholder {
+    color: #fff; }
+
+.policy__checkbox {
+  opacity: 0;
+  visibility: heidden; }
+  .policy__checkbox:checked + .policy__label::before {
+    background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
+
+.policy__label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.14rem; }
+  .policy__label::before {
+    margin-right: 0.64rem;
+    content: '';
+    width: 18px;
+    height: 18px;
+    border: 1px solid #E3B873; }
+
 *, *:before, *:after {
   box-sizing: border-box; }
 
@@ -366,7 +399,8 @@ img {
     font-family: 'Yeseva One', cursive;
     font-size: .97rem; }
     .section-title__heading {
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      color: #181818; }
     .section-title__image {
       display: flex;
       justify-content: center;
@@ -381,9 +415,10 @@ img {
     .section-title__description {
       max-width: 52.92rem;
       margin: 1.4rem auto 3.5rem auto;
+      font-family: 'Futura Book', sans-serif;
       font-size: 1.42rem;
       line-height: 1.9rem;
-      font-family: 'Futura Book', sans-serif;
+      color: #363636;
       text-transform: none; }
 
 .header {
@@ -515,7 +550,7 @@ img {
 
 .title {
   margin-bottom: 1.05rem;
-  font-family: 'Yeseva One';
+  font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
   font-size: 2.857rem;
   line-height: 3.785rem;
@@ -545,8 +580,9 @@ img {
 .card__title {
   margin: 0;
   margin-bottom: .5rem;
-  font-family: Yeseva One;
-  font-size: 1.29rem; }
+  font-family: 'Yeseva One';
+  font-size: 1.29rem;
+  color: #363636; }
 
 .card__list {
   margin: 0;
@@ -555,6 +591,10 @@ img {
   font-size: 1.07rem;
   line-height: 1.86rem;
   color: #959595; }
+  .card__list__desktop {
+    display: block; }
+  .card__list__mobile {
+    display: none; }
 
 .card__pricetag {
   position: absolute;
@@ -566,6 +606,59 @@ img {
   text-transform: uppercase;
   background: #E3B873;
   color: #fff; }
+
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 19, 19, 0.6);
+  z-index: 2; }
+  .modal--visible {
+    opacity: 1;
+    visibility: visible; }
+  .modal__dialog {
+    position: relative;
+    max-width: 36.142rem;
+    padding: 2.357rem 3.56rem 1.928rem;
+    color: #fff;
+    background-color: #131313; }
+  .modal__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    margin: 12px;
+    background: transparent url("../img/close.svg") no-repeat center;
+    border: none;
+    cursor: pointer; }
+  .modal__title {
+    margin: 0 0 2rem 0;
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.357rem;
+    line-height: 1.9rem;
+    text-align: center; }
+  .modal__form {
+    display: flex;
+    flex-direction: column; }
+  .modal__input {
+    margin-bottom: 3.422rem; }
+    .modal__input:last-of-type {
+      margin-bottom: -.1rem; }
+  .modal__policy {
+    margin-bottom: 2.7rem; }
+  .modal__button {
+    padding: 1.321rem 3.55rem;
+    align-self: flex-end; }
 
 @media screen and (max-width: 1200px) {
   html {
@@ -582,22 +675,33 @@ img {
     margin-left: 0; } }
 
 @media screen and (max-width: 768px) {
+  .section-title__heading {
+    font-size: 1.83rem; }
   .section-title__description {
     max-width: 25.666rem;
     margin: 1.64rem auto 0 auto;
     font-size: 1.25rem; }
+  .types__card__pricetag {
+    padding: 1.1rem 2.9rem; }
   .design {
     background-color: #131313; }
+    .design__card__pricetag {
+      padding: 1.1rem 3.9rem; }
     .design__section-title {
-      margin-bottom: 2.78rem;
-      color: #fff; }
+      margin-bottom: 2.78rem; }
+      .design__section-title__description {
+        color: #fff; }
   .row {
     flex-direction: column;
     align-items: center; }
   .col {
     margin-bottom: 6rem; }
   .card__text {
-    margin: -11.7rem 0 0 0; } }
+    margin: -11.7rem 0 0 0; }
+  .card__list__desktop {
+    display: none; }
+  .card__list__mobile {
+    display: block; } }
 
 @media screen and (max-width: 576px) {
   .container {
