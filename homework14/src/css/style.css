@@ -682,11 +682,11 @@ img {
     margin: 1.64rem auto 0 auto;
     font-size: 1.25rem; }
   .types__card__pricetag {
-    padding: 1.1rem 2.9rem; }
+    padding: 1.1rem 2.5rem .8rem 2.8rem; }
   .design {
     background-color: #131313; }
     .design__card__pricetag {
-      padding: 1.1rem 3.9rem; }
+      padding: 1.1rem 3.9rem .9rem 3.9rem; }
     .design__section-title {
       margin-bottom: 2.78rem; }
       .design__section-title__description {
