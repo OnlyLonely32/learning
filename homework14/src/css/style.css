@@ -322,6 +322,9 @@ template {
   max-width: 1256px;
   margin: auto; }
 
+*, *:focus {
+  outline: none; }
+
 .button {
   font-size: .928rem;
   font-weight: 500;
