@@ -10,15 +10,37 @@ img
  max-width: 100%
 .section
  padding: 4.28rem 0
+ &--dark
+  background-color: $dark
+  color: $light
  &-title
-  margin: 0
   text-align: center
-  text-transform: uppercase
-  font-family: 'Yeseva One', cursive
   font-size: .97rem
+  &__text
+   padding-top: 0.4rem
+   max-width: 32.5rem
+   font-size: 1.28rem
+   line-height: 1.6
+  &__word
+   display: flex
+   align-items: center
+   &::after
+    margin-left: 2.4rem
+    content: ''
+    width: 92px
+    height: 1px
+    background-color: $primary
+  &--left
+   text-align: left
   &__heading
    margin-bottom: 1rem
    color: $fortitle
+   text-transform: uppercase
+   font-family: 'Yeseva One', cursive
+   line-height: 150%
+   &--primary
+    color: $primary
+    font-size: 1.75rem
   &__image
    display: flex
    justify-content: center

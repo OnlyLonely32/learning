@@ -4,6 +4,35 @@
  .nav
   &__item
    margin-right: 1rem
+@media screen and ( max-width: 1024px )
+ .swiper-slide__text
+  margin-right: 0
+ .col
+  &-50
+   width: 100%
+ .section
+  &-title
+   &__word
+    display: block
+    &::after
+     display: none
+     margin: 0
+   &--left
+    text-align: center
+ .mobile
+  &__order
+   &-top
+    order: -1
+ .swiper
+  &-slider
+   &-img
+    margin-top: 0
+ .projects
+  &-title
+   &__text
+    margin-left: auto
+    margin-right: auto
+
 @media screen and ( max-width: 992px )
  .nav
   display: none
@@ -12,6 +41,10 @@
    display: none
   &__content
    margin-left: 0
+ .col
+  &-30
+   flex-basis: 49%
+   margin-bottom: 6rem
 // 768px
 @media screen and ( max-width: 768px )
  .section
@@ -27,20 +60,12 @@
    &__pricetag
     padding: 1.1rem 2.5rem .8rem 2.8rem
  .design
-  background-color: $dark
   &__card
    &__pricetag  
      padding: 1.1rem 3.9rem .9rem 3.9rem
   &__section
    &-title
     margin-bottom: 2.78rem
-    &__description
-     color: $light  
- .row
-  flex-direction: column
-  align-items: center
- .col
-  margin-bottom: 6rem
  .card
   &__text
    margin: -11.7rem 0 0 0
@@ -50,10 +75,21 @@
    &__mobile
     display: block 
 @media screen and ( max-width: 576px )
+ .row
+  flex-direction: column
+  align-items: center
+ .col
+  width: 100%
  .container
   width: 90.15%
  .header
   padding: 1.75rem 0
+ .design
+  background-color: $dark
+  &__section
+   &-title
+    &__description, &__heading
+     color: $light  
  .contacts
   &__phone
    margin-right: 0
@@ -79,7 +115,29 @@
    display: block 
    width: 100%
    margin: 0 0 2.16rem 0
-   font-size: 1.08rem
+   font-size: 1.08rem 
+ .swiper
+  &-container
+
+   &__mobile
+    margin-top: -5.5rem
+  &-slide
+   &__text
+    margin-bottom: 2.5rem
+   &__heading
+    margin-bottom: 1rem
+    font-size: 1.15rem
+   &__value
+    font-size: 1.2rem
+ .projects
+  &-title
+   &__heading
+    margin-bottom: 1.5rem
+    font-size: 1.7rem
+   &__text
+    font-size: 1.15rem
+    line-height: 1.6
+    max-width: 24.4rem
 @media screen and ( max-height: 520px )
  .hero
   &__scroll-down
