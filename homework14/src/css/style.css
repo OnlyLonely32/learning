@@ -329,11 +329,16 @@ template {
   flex-wrap: wrap; }
 
 .col-30 {
+  width: 30%;
   flex-basis: 30%; }
 
 .col-50 {
   width: 50%;
   flex-basis: 50%; }
+
+.col-70 {
+  width: 60%;
+  flex-basis: 60%; }
 
 *, *:focus {
   outline: none; }
@@ -765,12 +770,90 @@ img {
     line-height: 1.3;
     display: block; }
 
+.swiper-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center; }
+
 .swiper-container-horizontal > .swiper-pagination-bullets {
   width: auto;
   bottom: 0; }
 
 .swiper-slider-img {
   margin-top: -15rem; }
+
+.path__counter {
+  margin-bottom: 1.5rem;
+  font-family: 'Yeseva One';
+  font-size: 1.2rem; }
+
+.path-slide__heading {
+  max-width: 18.7rem;
+  margin: 0;
+  margin-bottom: .55rem;
+  font-family: 'Yeseva One';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.07rem;
+  line-height: 1.6;
+  text-transform: uppercase;
+  color: #E3B873; }
+
+.path-slide__value {
+  max-width: 24rem;
+  margin: 0;
+  margin-bottom: .6rem;
+  font-family: 'Futura Book';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.07rem;
+  line-height: 1.75; }
+
+.path__suptitle {
+  font-size: 1.07rem;
+  text-transform: uppercase; }
+
+.path__row {
+  justify-content: space-between;
+  align-items: cecter; }
+
+.append-buttons {
+  cursor: pointer; }
+  .append-buttons__heading {
+    margin: 0;
+    margin-bottom: .7rem;
+    padding: .2rem 0;
+    max-width: 1.5rem;
+    font-family: 'Yeseva One';
+    font-size: 1.07rem;
+    border-bottom: 1px solid #E3B873;
+    cursor: pointer; }
+  .append-buttons__text {
+    margin: 0;
+    max-width: 9rem;
+    font-size: 1.07rem;
+    cursor: pointer; }
+
+.gallery-thumbs .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4; }
+
+.gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1; }
+
+.swiper-slide__rows {
+  width: 30%;
+  margin-bottom: 2.8rem;
+  flex-direction: column; }
+
+.swiper-wrapper__wrap {
+  flex-wrap: wrap; }
+
+.gallery-thumbs {
+  margin-top: -5.5rem; }
 
 @media screen and (max-width: 1200px) {
   html {

@@ -61,24 +61,60 @@ $(document).ready(function () {
   });
   // прокрутка в начало экрана
   backToTop();
-  var mySwiper = new Swiper ('.swiper-container', {
+
+  let slider1 = new Swiper ('.slider1', {
   loop: true,
   pagination: {
     el: '.swiper-pagination',
-    type: 'bullets',
+
   },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   }
-  })
+  
+  });
+  
+  let slider2 = new Swiper ('.slider2', {
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
 
-  var next = $('.swiper-button-next')
-  var prev = $('.swiper-button-prev')
-  var bullets = $('.swiper-pagination')
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+  });
+
+  let next = $('.swiper1__next');
+  let prev = $('.swiper1__prev');
+  let bullets = $('.swiper1__pagination');
 
   
   bullets.css('left', prev.width() + 25);
   next.css('left', prev.width() + bullets.width() + 50);
+
+  let next1 = $('.swiper2__next');
+  let prev1 = $('.swiper2__prev');
+  let bullets1 = $('.swiper2__pagination');
+
+  
+  bullets1.css('left', prev1.width() + 25);
+  next1.css('left', prev1.width() + bullets1.width() + 50);
+
+
+  var galleryThumbs = new Swiper('.gallery-thumbs', {
+    slidesPerView: 6,
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+  });
+  var galleryTop = new Swiper('.gallery-top', {
+    spaceBetween: 6,
+    thumbs: {
+      swiper: galleryThumbs
+    }
+  });
 
 });
