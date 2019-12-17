@@ -106,7 +106,7 @@ $(document).ready(function () {
    console.log(i);
    if (i=== -1) {
     i = items.length - 1;
-   } else if (i > items.length){
+   } else if (i === items.length){
     i = 0;
    }else
      console.log(i);
