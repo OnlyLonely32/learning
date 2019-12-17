@@ -46,22 +46,23 @@
   max-width: 9rem
   font-size: 1.07rem
   cursor: pointer
-.gallery-thumbs .swiper-slide 
-  width: 25%
-  height: 100%
-  opacity: 0.4
-.gallery-thumbs .swiper-slide-thumb-active 
-  opacity: 1
 .swiper
+ &-container
+  flex-direction: column
+ &__nav
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
  &-slide
   &__rows
-   width: 30%
+   flex-basis: 33%
    margin-bottom: 2.8rem
-   flex-direction: column
+   opacity: .4
+   &-active
+    opacity: 1
  &-wrapper
   &__wrap
    flex-wrap: wrap
-.gallery
- &-thumbs
-  margin-top: -5.5rem
+
+
 

@@ -34,7 +34,7 @@
     margin-right: auto
 
 @media screen and ( max-width: 992px )
- .nav
+ .nav, .path
   display: none
  .hero
   &__instagram
@@ -79,7 +79,9 @@
   flex-direction: column
   align-items: center
  .col
-  width: 100%
+  &-30
+   flex-basis: 100%
+   width: 100%
  .container
   width: 90.15%
  .header
@@ -118,7 +120,6 @@
    font-size: 1.08rem 
  .swiper
   &-container
-
    &__mobile
     margin-top: -5.5rem
   &-slide
