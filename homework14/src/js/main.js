@@ -90,6 +90,8 @@ $(document).ready(function () {
   let next = $('.swiper1__next');
   let prev = $('.swiper1__prev');
   let bullets = $('.swiper1__pagination');
+  let container = $('.navigation__container');
+  container.css('left', screen.width / 2 ) - ( container / 2 );
   bullets.css('left', prev.width() + 25);
   next.css('left', prev.width() + bullets.width() + 50);
 
@@ -134,4 +136,124 @@ $(document).ready(function () {
   });
 
   new WOW().init();
+
+  $('.modal__form').validate({
+   errorClass: "invalid",
+   errorElement: "div",
+    rules: {
+      // simple rule, converted to {required:true}
+     userName: {
+      required: true,
+      minlength: 2,
+      maxlength: 15
+     },
+     userPhone: {
+      required: true,
+      minlength: 18
+     },
+     userEmail: {
+      required: true,
+      email: true
+     }
+    },
+    messages: {
+     userName: {
+      required: "Обязательзо введите ваше имя!",
+      maxlength: "Имя слишком длинное!",
+      minlength: jQuery.validator.format("Имя должно состоять как минимум из {0} букв!"),
+     },
+     userPhone: {
+      required: "Обязательзо введите ваш телефон!",
+      minlength: "Введите телефон полностью!",
+     }, 
+     userEmail: {
+      required: "Обязательзо введите ваш Email!",
+      email: "Ваш email должен иметь формат name@domain.com"
+     }
+    }
+  });
+
+  $('.footer__form').validate({
+   errorClass: "invalid",
+   errorElement: "div",
+    rules: {
+      // simple rule, converted to {required:true}
+     userName: {
+      required: true,
+      minlength: 2,
+      maxlength: 15
+     },
+     userPhone: {
+      required: true,
+      minlength: 18
+     },
+     userText: {
+      required: true,
+      minlength: 10
+     }
+    },
+    messages: {
+     userName: {
+      required: "Обязательзо введите ваше имя!",
+      minlength: jQuery.validator.format("Имя должно состоять как минимум из {0} букв!"),
+      maxlength: "Имя слишком длинное!",
+     },
+     userPhone: {
+      required: "Обязательзо введите ваш телефон!",
+      minlength: "Введите телефон полностью!",
+     }, 
+     userText: {
+      required: "Обязательзо введите сообщение!",
+      minlength: jQuery.validator.format("Имя должно состоять как минимум из {0} букв!"),
+     }
+    }
+  });
+
+  $('.control__form').validate({
+   errorClass: "invalid",
+   errorElement: "div",
+    rules: {
+      // simple rule, converted to {required:true}
+     userName: {
+      required: true,
+      minlength: 2,
+      maxlength: 15
+     },
+     userPhone: {
+      required: true,
+      minlength: 18
+     }
+    },
+    messages: {
+     userName: {
+      required: "Обязательзо введите ваше имя!",
+      maxlength: "Имя слишком длинное!",
+      minlength: jQuery.validator.format("Имя должно состоять как минимум из {0} букв!"),
+     },
+     userPhone: {
+      required: "Обязательзо введите ваш телефон!",
+      minlength: "Введите телефон полностью!",
+     }
+    }
+  });
+
+  // маска для телфона
+  $('[type=tel]').mask('+7 (000) 00-00-000');
+  
+  $(window).scroll( () => {
+   let atop= document.querySelector('.control__section-title__heading');
+   if ( $(this).scrollTop() >=$('.control__section-title__heading').offset().top-document.documentElement.clientHeight)
+   {atop.classList.add('anima');}
+   atop = document.querySelector('.types__section-title__heading');
+   if ( $(this).scrollTop() >=$('.types__section-title__heading').offset().top-document.documentElement.clientHeight)
+   {atop.classList.add('anima');}
+   atop = document.querySelector('.design__section-title__heading');
+   if ( $(this).scrollTop() >=$('.design__section-title__heading').offset().top-document.documentElement.clientHeight)
+   {atop.classList.add('anima');}
+   // atop = document.querySelector('.hero__title');
+   // if ( $(this).scrollTop() >=$('.hero__title').offset().top-document.documentElement.clientHeight)
+   // {atop.classList.add('animaleft');}
+   }
+   
+   );
 });

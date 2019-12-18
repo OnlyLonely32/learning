@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'Futura Book';
   src: url("../fonts/futura/FuturaBookC.woff") format("woff"), url("../fonts/futura/FuturaBookC.woff2") format("woff2");
@@ -377,6 +378,8 @@ template {
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   background-color: transparent; }
+  .input.invalid {
+    border-bottom: 1px solid tomato; }
   .input--light::placeholder {
     color: #fff; }
 
@@ -397,6 +400,11 @@ template {
     width: 18px;
     height: 18px;
     border: 1px solid #E3B873; }
+  .policy__label--center {
+    justify-content: center; }
+
+.invalid {
+  color: tomato; }
 
 .to-top {
   display: none;
@@ -411,6 +419,29 @@ template {
   transform: rotate(180deg);
   cursor: pointer;
   z-index: 1; }
+
+@keyframes anima   /* назовём анимацию: "go-left-right" */ {
+  from {
+    opacity: 0;
+    transform: scale(0); }
+  to {
+    opacity: 1;
+    transform: scale(1); } }
+
+@keyframes animaleft   /* назовём анимацию: "go-left-right" */ {
+  from {
+    opacity: 0;
+    margin-right: -200px; }
+  50% {
+    margin-right: 0; }
+  to {
+    opacity: 1; } }
+
+.anima {
+  animation: anima 1s; }
+
+.animaleft {
+  animation: animaleft 3s; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -677,10 +708,12 @@ img {
   flex-basis: 30%; }
 
 .control__input {
-  border-bottom: 1px solid rgba(19, 19, 19, 0.15); }
+  border-bottom: 1px solid rgba(19, 19, 19, 0.15);
+  color: #131313; }
 
 .control__button {
-  padding: 1.2857rem 4.785rem; }
+  padding: 1.2857rem 4.785rem;
+  line-height: .5rem; }
 
 .control__policy {
   margin-top: 1.2rem;
@@ -814,10 +847,12 @@ img {
   .modal__form {
     display: flex;
     flex-direction: column; }
-  .modal__input {
+  .modal__input-group {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 3.422rem; }
-    .modal__input:last-of-type {
-      margin-bottom: -.1rem; }
+  .modal__input:last-of-type {
+    margin-bottom: -.1rem; }
   .modal__policy {
     margin-bottom: 2.7rem; }
   .modal__button {
@@ -881,6 +916,10 @@ img {
   height: 100%;
   display: flex;
   align-items: center; }
+
+.navigation__container {
+  position: relative;
+  margin: 0 auto; }
 
 .swiper-container-horizontal > .swiper-pagination-bullets {
   width: auto;
@@ -959,6 +998,52 @@ img {
 .swiper-wrapper__wrap {
   flex-wrap: wrap; }
 
+.footer {
+  padding-top: 3rem;
+  background-image: url("../img/footer-bg.jpg");
+  background-color: #131313; }
+  .footer__wrap {
+    background-color: #181818;
+    max-width: 63.07rem;
+    margin: 0 auto;
+    margin-bottom: 3.714rem;
+    padding: 1.1rem; }
+  .footer__title {
+    margin-bottom: 3.3rem;
+    text-transform: uppercase;
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    font-size: 1.428rem;
+    text-align: center; }
+  .footer__form {
+    max-width: 37.142rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  .footer__input {
+    padding-top: .4rem; }
+    .footer__input-group {
+      margin-bottom: 3rem;
+      display: flex;
+      flex-direction: column;
+      flex-basis: 45%; }
+      .footer__input-group:nth-of-type(3) {
+        margin-bottom: 2rem; }
+    .footer__input--full-width {
+      flex-basis: 100%; }
+  .footer__policy {
+    margin-bottom: 3.5rem;
+    flex-basis: 100%; }
+  .footer__button {
+    margin: 0 auto;
+    margin-bottom: 1.4rem;
+    padding: 1.2rem 4.3rem;
+    font-size: 1.07rem; }
+  .footer__menu {
+    padding: 2.75rem 0;
+    background-color: #181818; }
+
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px; }
@@ -1014,7 +1099,10 @@ img {
   .card__list__desktop {
     display: none; }
   .card__list__mobile {
-    display: block; } }
+    display: block; }
+  .control__input {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff; } }
 
 @media screen and (max-width: 576px) {
   .row {
@@ -1070,7 +1158,29 @@ img {
   .projects-title__text {
     font-size: 1.15rem;
     line-height: 1.6;
-    max-width: 24.4rem; } }
+    max-width: 24.4rem; }
+  .footer__policy {
+    margin-bottom: 6rem; }
+    .footer__policy__label {
+      font-size: 1.32rem; }
+  .footer__title {
+    margin-bottom: 4.5rem;
+    font-size: 1.65rem; }
+  .footer__input-group {
+    margin-bottom: 5.3rem; }
+    .footer__input-group:nth-of-type(3) {
+      margin-bottom: .6rem; }
+  .footer__menu {
+    display: none; }
+  .footer__wrap {
+    margin-bottom: 0; }
+  .footer__form {
+    flex-direction: column; }
+  .footer__button {
+    font-size: 1.3rem;
+    width: 100%; }
+  .policy__label--center {
+    justify-content: flex-start; } }
 
 @media screen and (max-height: 520px) {
   .hero__scroll-down {
