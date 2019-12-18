@@ -928,40 +928,38 @@ img {
 .swiper-slider-img {
   margin-top: -15rem; }
 
-.path__counter {
-  margin-bottom: 1.5rem;
-  font-family: 'Yeseva One';
-  font-size: 1.2rem; }
-
-.path-slide__heading {
-  max-width: 18.7rem;
-  margin: 0;
-  margin-bottom: .55rem;
-  font-family: 'Yeseva One';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.07rem;
-  line-height: 1.6;
-  text-transform: uppercase;
-  color: #E3B873; }
-
-.path-slide__value {
-  max-width: 24rem;
-  margin: 0;
-  margin-bottom: .6rem;
-  font-family: 'Futura Book';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.07rem;
-  line-height: 1.75; }
-
-.path__suptitle {
-  font-size: 1.07rem;
-  text-transform: uppercase; }
-
-.path__row {
-  justify-content: space-between;
-  align-items: cecter; }
+.path {
+  padding-bottom: 21.5rem; }
+  .path__counter {
+    margin-bottom: 1.5rem;
+    font-family: 'Yeseva One';
+    font-size: 1.2rem; }
+  .path-slide__heading {
+    max-width: 18.7rem;
+    margin: 0;
+    margin-bottom: .55rem;
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.07rem;
+    line-height: 1.6;
+    text-transform: uppercase;
+    color: #E3B873; }
+  .path-slide__value {
+    max-width: 24rem;
+    margin: 0;
+    margin-bottom: .6rem;
+    font-family: 'Futura Book';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.07rem;
+    line-height: 1.75; }
+  .path__suptitle {
+    font-size: 1.07rem;
+    text-transform: uppercase; }
+  .path__row {
+    justify-content: space-between;
+    align-items: cecter; }
 
 .append-buttons {
   cursor: pointer; }
@@ -997,6 +995,81 @@ img {
 
 .swiper-wrapper__wrap {
   flex-wrap: wrap; }
+
+.team__row {
+  margin-bottom: 4.5rem;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+.team__col {
+  flex-basis: 25%; }
+
+.team__section-sub {
+  position: relative;
+  max-width: 40.5rem;
+  margin: 0 auto;
+  font-size: 1.42rem;
+  line-height: 2.42rem;
+  text-align: center; }
+  .team__section-sub::before {
+    margin: auto;
+    margin-top: -1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: '';
+    width: 55px;
+    height: 2px;
+    background-color: #E3B873; }
+
+.team__section-title__heading {
+  color: #fff;
+  margin-top: -32rem; }
+
+.team__section-title__description {
+  max-width: 32rem;
+  color: #fff;
+  margin-bottom: 6rem; }
+
+.team__card {
+  position: relative;
+  margin: 0 auto; }
+  .team__card__sup__img {
+    position: absolute;
+    top: -2.5rem;
+    left: -2.5rem;
+    padding: 1rem;
+    background-color: #E3B873;
+    box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5); }
+  .team__card__image {
+    width: 100%; }
+  .team__card__text {
+    position: relative;
+    max-width: 16.64rem;
+    margin-top: -6rem;
+    padding: 1.5rem 0;
+    padding-bottom: 5rem; }
+  .team__card__description {
+    font-size: 1.3rem;
+    font-family: 'Futura Book';
+    text-align: center; }
+  .team__card__title {
+    text-align: center; }
+  .team__card__expiriance {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.1rem 0;
+    display: flex;
+    justify-content: center;
+    font-family: 'Yeseva One';
+    font-size: .92rem;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #E3B873; }
 
 .footer {
   padding-top: 3rem;
@@ -1041,7 +1114,7 @@ img {
     padding: 1.2rem 4.3rem;
     font-size: 1.07rem; }
   .footer__menu {
-    padding: 2.75rem 0;
+    padding: 3.5rem 0;
     background-color: #181818; }
 
 @media screen and (max-width: 1200px) {
@@ -1079,7 +1152,16 @@ img {
     margin-left: 0; }
   .col-30 {
     flex-basis: 49%;
-    margin-bottom: 6rem; } }
+    margin-bottom: 6rem; }
+  .team {
+    background-color: #131313; }
+    .team__col {
+      flex-basis: 40%;
+      margin-bottom: 4rem; }
+    .team__section-sub {
+      display: none; }
+    .team__section-title__heading {
+      margin-top: 0rem; } }
 
 @media screen and (max-width: 768px) {
   .section-title__heading {
@@ -1102,9 +1184,18 @@ img {
     display: block; }
   .control__input {
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    color: #fff; } }
+    color: #fff; }
+  .team__row {
+    margin-top: 4rem; }
+  .team__description {
+    margin-bottom: 3rem; }
+  .team__card__text {
+    margin: 0 auto;
+    margin-top: -6rem; } }
 
 @media screen and (max-width: 576px) {
+  .section-title__description {
+    max-width: 100%; }
   .row {
     flex-direction: column;
     align-items: center; }
@@ -1180,7 +1271,11 @@ img {
     font-size: 1.3rem;
     width: 100%; }
   .policy__label--center {
-    justify-content: flex-start; } }
+    justify-content: flex-start; }
+  .team__card {
+    margin-bottom: 2rem; }
+  .team__section-title__description {
+    margin-bottom: 6rem; } }
 
 @media screen and (max-height: 520px) {
   .hero__scroll-down {

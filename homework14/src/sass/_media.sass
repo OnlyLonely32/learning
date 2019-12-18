@@ -45,6 +45,17 @@
   &-30
    flex-basis: 49%
    margin-bottom: 6rem
+ .team
+  background-color: $dark
+  &__col
+   flex-basis: 40%
+   margin-bottom: 4rem
+  &__section
+   &-sub
+    display: none
+   &-title
+    &__heading
+     margin-top: 0rem
 // 768px
 @media screen and ( max-width: 768px )
  .section
@@ -78,7 +89,20 @@
   &__input
    border-bottom: 1px solid rgba($light, .15)
    color: $light
+ .team
+  &__row
+   margin-top: 4rem
+  &__description
+   margin-bottom: 3rem
+  &__card
+   &__text
+    margin: 0 auto
+    margin-top: -6rem
 @media screen and ( max-width: 576px )
+ .section
+  &-title
+   &__description
+    max-width: 100%
  .row
   flex-direction: column
   align-items: center
@@ -169,6 +193,13 @@
   &__label
    &--center
     justify-content: flex-start
+ .team
+  &__card
+   margin-bottom: 2rem
+  &__section
+   &-title
+    &__description
+     margin-bottom: 6rem
 @media screen and ( max-height: 520px )
  .hero
   &__scroll-down
