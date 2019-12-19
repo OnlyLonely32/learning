@@ -1,13 +1,31 @@
 .footer
  padding-top: 3rem
- background-image: url('../img/footer-bg.jpg')
- background-color: $dark
+ background: $dark url('../img/footer-bg.jpg') center no-repeat
+ background-size: cover
+ &__social
+  &__list
+   margin-bottom: 3rem
+   display: flex
+   flex-direction: row
+   justify-content: center
+   &--item
+    width: 28px
+    height: 28px
+    margin: 0 .5rem
+    cursor: pointer
+    display: flex
+    justify-content: center
+    align-items: center
+    list-style: none  
+    background-color: $primary
+    border-radius: 100%
  &__wrap
-  background-color: $black
   max-width: 63.07rem
   margin: 0 auto
+  margin-top: -20rem
   margin-bottom: 3.714rem
   padding: 1.1rem
+  background-color: $black
  &__title
   margin-bottom: 3.3rem
   text-transform: uppercase
@@ -30,8 +48,8 @@
    flex-basis: 45%
    &:nth-of-type(3)
     margin-bottom: 2rem
-  &--full-width
-   flex-basis: 100%
+   &--full-width
+    flex-basis: 100%
  &__policy
   margin-bottom: 3.5rem
   flex-basis: 100%
@@ -43,4 +61,22 @@
  &__menu
   padding: 3.5rem 0
   background-color: $black
-  
+ &__map
+  width: 66rem 
+  height: 33rem
+  margin: 0 auto
+  margin-bottom: 4rem
+  &__wrapper
+   display: flex
+   flex-direction: column
+   &__heading
+    max-width: 38rem
+    margin: 0 auto
+    margin-bottom: 1.7rem
+    font-size: 1.42rem
+    line-height: 1.5
+    font-family: 'Yeseva One', cursive
+    text-transform: uppercase
+    text-align: center
+    color: $primary
+ 
