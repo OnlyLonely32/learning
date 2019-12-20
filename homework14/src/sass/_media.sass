@@ -41,27 +41,33 @@
    display: none
   &__content
    margin-left: 0
+ .row
+  justify-content: center
  .col
   &-30
-   flex-basis: 49%
+   flex-basis: 45%
    margin-bottom: 6rem
+   &:nth-child(1)
+    margin-right: 4rem
  .team
   background-color: $dark
   &__col
    flex-basis: 40%
    margin-bottom: 4rem
+   
   &__section
    &-sub
     display: none
    &-title
     &__heading
      margin-top: 0rem
- 
 // 768px
 @media screen and ( max-width: 768px )
  .client
   display: none
  .footer
+  padding-top: 0
+  background-image: none
   &__wrap
    margin-top: 0
  .map

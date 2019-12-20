@@ -164,7 +164,7 @@
     <p class="control__text">
       На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.
     </p>
-    <form action="#" class="form control__form">
+    <form action="send__control.php" method="POST" class="form control__form">
      <div class="control__input-group">
       <label for="user-name" class="label form__label control__label">Имя</label>
       <input type="name" name="userName" class="input form__input control__input" id="user-name" placeholder="Как вас зовут:">
@@ -573,7 +573,7 @@
    </div>
    <!-- /.section-title team__section-title -->
    <div class="row team__row">
-    <div class="team__col">
+    <div class="col-30 team__col">
      <div class="card team__card">
       <div class="card__sup__img team__card__sup__img">
        <img src="./img/idea.svg" alt="">
@@ -596,7 +596,7 @@
      </div>
     </div>
     <!-- /.col-30 -->
-    <div class="team__col">
+    <div class="col-30 team__col">
      <div class="card team__card">
       <div class="card__sup__img team__card__sup__img">
        <img src="./img/pen.svg" alt="">
@@ -619,7 +619,7 @@
      </div>
     </div>
     <!-- /.col-30 -->
-    <div class="team__col">
+    <div class="col-30 team__col">
      <div class="card team__card">
       <div class="card__sup__img team__card__sup__img">
        <img src="./img/portfolio.svg" alt="">
@@ -764,7 +764,7 @@
    <div class="footer__wrap">
     <h3 class="footer__title">Остались вопросы?</h3>
     <!-- /.footer__title -->
-    <form action="#" class="form footer__form">
+    <form action="send__footer.php" method="POST" class="form footer__form">
      <div class="input-group footer__input-group">
       <label for="user-name" class="label label--light form__label">Имя</label>
       <input type="name" name="userName" class="input input--light  orm__input footer__input" id="user-name" placeholder="Как вас зовут:">
@@ -833,7 +833,7 @@
    <div class="modal__dialog">
      <button class="modal__close" data-toggle="modal__close"></button>
      <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
-     <form action="#" class="form modal__form">
+     <form action="send__modal.php" method="POST" class="form modal__form">
       <div class="input-group modal__input-group">
        <label for="user-name" class="label label--light form__label">Имя</label>
        <input type="name" name="userName" class="input input--light  orm__input modal__input" id="user-name" placeholder="Как вас зовут:">
